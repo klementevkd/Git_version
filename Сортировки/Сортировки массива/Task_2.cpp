@@ -75,9 +75,9 @@ vector<vector<int>> transp(vector<vector<int>> matrix) {//функция для 
 	for (int i = 0; i < matrix.size(); i++) {
 		for (int j = 0; j < matrix.size(); j++) {
 			if ((matrix[i][j] != matrix[j][i]) && j >= i) {
-				matrix[i][j] = matrix[i][j] xor matrix[j][i];//меняет местами
-				matrix[j][i] = matrix[i][j] xor matrix[j][i];//меняет местами
-				matrix[i][j] = matrix[i][j] xor matrix[j][i];//меняет местами
+				matrix[i][j] = matrix[i][j] && matrix[j][i];//меняет местами
+				matrix[j][i] = matrix[i][j] && matrix[j][i];//меняет местами
+				matrix[i][j] = matrix[i][j] && matrix[j][i];//меняет местами
 			}
 		}
 
